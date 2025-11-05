@@ -53,3 +53,5 @@ def test_my_todos2(get_todo_data, get_default_count_todo_items: int) -> None:
     )
     logging.info(f"Количество выбранных элементов: {len(selected_items)}")
     assert len(selected_items) == get_default_count_todo_items
+
+

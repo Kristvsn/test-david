@@ -51,3 +51,6 @@ class BasePage:
          :param selector: локатор на странице
          """
         return self.page.locator(selector).inner_text()
+
+    def click_by_selector_and_exact_text(self, selector: str, text: str):
+        self.page.locator(selector).get_by_text(text, exact=True).click()

@@ -1,0 +1,14 @@
+{
+  "uuid": "4083581b-fc65-4026-9b80-78a2fff7cfd8",
+  "request": {
+    "url": "/user/42",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"id\": 42, \"name\": \"Alice\", \"role\": \"admin\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
