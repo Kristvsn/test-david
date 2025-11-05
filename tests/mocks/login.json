@@ -1,0 +1,5 @@
+{ "uuid": "c0519bc7-a149-47ca-8b37-f5b702345017",
+"request": { "url": "/login", "method": "POST" },
+"response": { "status": 200, "body": "{ \"echoUsername\": \"{{jsonPath request.body '$.username'}}\" }",
+"headers": { "Content-Type": "application/json" }, "transformers": [ "response-template" ] } 
+}

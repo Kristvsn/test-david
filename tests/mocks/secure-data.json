@@ -1,0 +1,19 @@
+{
+  "uuid": "74c658d6-de20-4043-81e7-c4e404b71ebc",
+  "request": {
+    "url": "/secure-data",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "matches": "Bearer .*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"status\": \"access granted\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

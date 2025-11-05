@@ -1,4 +1,12 @@
+from datetime import datetime,timedelta
+
 class UIAssertions:
+
+    @staticmethod
+    def generate_day_after_offset(offset_days: int):
+        target_date= datetime.today()+timedelta(days=offset_days)
+        return str(target_date.day)
+
     """
     Асерты для проверок.
 
@@ -36,3 +44,10 @@ class UIAssertions:
         """
         current_url = page.url
         assert expected_part in current_url, f"Ожидали, что URL содержит '{expected_part}', но получили '{current_url}'"
+
+    @staticmethod
+    def assert_check_many_texts(elements, expected_text: list[str]):
+        elements = elements.all()
+        for i, (el,expected) in enumerate(zip (elements,expected_text)):
+            text = el.text_content()
+            assert expected in text, f'Ожидали {expected}, получили {text}'

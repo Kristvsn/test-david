@@ -1,0 +1,19 @@
+{
+  "uuid": "1cdd8035-1df8-49df-8571-1779d505e3cf",
+  "request": {
+    "urlPath": "/search",
+    "method": "GET",
+    "queryParameters": {
+      "q": {
+        "equalTo": "wiremock"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"results\": [\"WireMock Guide\", \"WireMock Tutorial\"] }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
