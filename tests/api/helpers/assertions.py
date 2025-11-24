@@ -57,3 +57,16 @@ class Assertions:
         response_json: Any = response.json()
         assert isinstance(response_json, list), \
             f'Ожидался тип "list", но получен {type(response_json).__name__}. Тело ответа: {response.text}'
+
+
+    @staticmethod
+    def assert_json_is_dict(response: Response) -> None:
+        """
+        Проверяет, что JSON-ответ является словарем.
+
+        :param response: Объект ответа от requests.
+        :raises AssertionError: Если JSON не является словарем.
+        """
+        response_json: Any = response.json()
+        assert isinstance(response_json, dict), \
+            f'Ожидался тип "dict", но получен {type(response_json).__name__}. Тело ответа: {response.text}'
